@@ -1,0 +1,14 @@
+<h1>Pages#index</h1>
+<p>Find me in app/views/pages/index.html.erb</p>
+
+<!-- erb embedded; echoing tags -->
+<!-- # <% non-echoing tag ... for logic%>
+# <%= echoing tag ... for when you want to display on to the page%> -->
+
+<% @pages.each do |page| %>
+  <%= page %>
+  <%= link_to 'Show Page', page_path(page) %>
+
+<% end %>
+
+<%= link_to 'New Page', new_page_path %>
